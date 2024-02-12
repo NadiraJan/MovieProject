@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>GENRES</title>
+</head>
+
+<body>
+<h2>Genres</h2>
+<a href="/genres"></a>
+<tbody>
+
+
+<tr th:each="genres:${genres}">
+<td th:text="${genres.id}"></td>
+<td th:text="${genres.naam}"></td>
+
+
+
+
+
+     <!--   <a th:href="@{'/edit/' + ${genres.id}}">Edit</a>&nbsp;&nbsp;&nbsp;
+        <a th:href="@{'/delete/' + ${genres.id}}">Delete</a>!-->
+      </td>
+    </tr>
+    </tbody>
+
+</div>
+</body>
+</html>

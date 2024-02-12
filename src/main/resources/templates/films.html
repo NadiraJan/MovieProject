@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Films</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+<ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" th:href="@{/films}">films </a>
+    </li>
+    <table class="table table-stripped">
+        <tr>
+            <th>Films ID</th>
+            <th>Titel</th>
+            <th>voorrad</th>
+            <th>gereserveerd</th>
+            <th>prijs</th>
+            <th>GenreId</th>
+
+
+            <tbody>
+            <tr th:each="films: ${films}">
+                <th th:text="${films.id}"></th>
+                <th th:text="${films.titel}"></th>
+                <th th:text="${films.voorraad}"></th>
+                <th th:text="${films.gereserveerd}"></th>
+                <th th:text="${films.prijs}"></th>
+             <!--  <th th:text="${films.genres.genreId}"></th>!-->
+
+                <!--  <th th:text="${films.genres.genres_id}"></th>!-->
+
+
+       </tr>
+       </tbody>
+   </tr>
+</table>
+</ul>
+
+<
+</body>
+</html>
